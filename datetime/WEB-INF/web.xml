@@ -1,0 +1,11 @@
+<web-app>
+	<servlet>
+		<servlet-class> DateTimeServlet </servlet-class>
+		<servlet-name> DateTimeServlet </servlet-name>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name> DateTimeServlet </servlet-name>
+		<url-pattern> /DateTimeServlet </url-pattern>
+	</servlet-mapping>
+</web-app>

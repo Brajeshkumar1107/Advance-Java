@@ -1,0 +1,22 @@
+<web-app>
+	<!-- Login Servlet -->
+	<servlet>
+		<servlet-class>LoginServlet</servlet-class>
+		<servlet-name>LoginServlet</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Register Servlet -->
+	<servlet>
+		<servlet-class>RegisterServlet</servlet-class>
+		<servlet-name>RegisterServlet</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>

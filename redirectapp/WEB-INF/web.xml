@@ -1,0 +1,19 @@
+<web-app>
+	<!-- Login Servlet -->
+	<servlet>
+		<servlet-class>Redirect</servlet-class>
+		<servlet-name>Redirect</servlet-name>
+
+		<!-- Init Parameter -->
+		<init-param>
+			<param-name>query</param-name>
+			<param-value>select username from users where userid = ? and password = ?</param-value>
+		</init-param>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Redirect</servlet-name>
+		<url-pattern>/Redirect</url-pattern>
+	</servlet-mapping>
+
+</web-app>

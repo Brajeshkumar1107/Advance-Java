@@ -1,0 +1,77 @@
+<web-app>
+	<!-- Listener -->
+	<listener>
+		<listener-class>MyDBListener</listener-class>
+	</listener>
+
+	<!-- Context Parameter -->
+	<context-param>
+		<param-name>dbUrl</param-name>
+		<param-value>jdbc:oracle:thin:@//localhost:1521/xe</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>systemName</param-name>
+		<param-value>system</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>password</param-name>
+		<param-value>620677</param-value>
+	</context-param>
+
+	<!-- Login Servlet -->
+	<servlet>
+		<servlet-class>LoginServletRedirect</servlet-class>
+		<servlet-name>LoginServletRedirect</servlet-name>
+
+		<!-- Init Parameter -->
+		<init-param>
+			<param-name>query</param-name>
+			<param-value>select username from users where userid = ? and password = ?</param-value>
+		</init-param>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginServletRedirect</servlet-name>
+		<url-pattern>/LoginServletRedirect</url-pattern>
+	</servlet-mapping>
+
+	<!-- Register Servlet -->
+	<servlet>
+		<servlet-class>RegisterServlet</servlet-class>
+		<servlet-name>RegisterServlet</servlet-name>
+
+		<!-- Init Parameter -->
+		<init-param>
+			<param-name>query</param-name>
+			<param-value>select userid from users where userid = ?</param-value>
+		</init-param>
+		<init-param>
+			<param-name>insertquery</param-name>
+			<param-value>insert into users values(?,?,?)</param-value>
+		</init-param>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Update Servlet -->
+	<servlet>
+		<servlet-class>UpdateServlet</servlet-class>
+		<servlet-name>UpdateServlet</servlet-name>
+
+		<!-- Init Parameter -->
+		<init-param>
+			<param-name>query</param-name>
+			<param-value>update users set username = ? , password = ? where userid = ?</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UpdateServlet</servlet-name>
+		<url-pattern>/UpdateServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>

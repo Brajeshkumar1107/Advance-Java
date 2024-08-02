@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+</head>
+<body>
+    <form action="UserInfoServlet" method="get">
+        <h2>Your Name: <input type="text" name="username"></h2>
+
+        <h2>Your Gender <br>
+            <input type="radio" name="gender" id="male" value="Male">
+            <label for="male">Male</label>
+
+            <input type="radio" name="gender" id="female" value="Female">
+            <label for="female">Female</label>
+        </h2>
+
+        <label for="hobbies">Your Hobbies</label><br>
+        <select name="hobbies" id="hobbies" multiple>
+            <option value="Reading">Reading</option>
+            <option value="Cocking">Cocking</option>
+            <option value="Coding">Coding</option>
+            <option value="Sleeping">Sleeping</option>
+        </select>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

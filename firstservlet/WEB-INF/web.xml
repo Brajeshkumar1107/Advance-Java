@@ -1,0 +1,21 @@
+<web-app>
+	<servlet>
+		<servlet-class>MyServlet</servlet-class>
+		<servlet-name>MyServlet</servlet-name>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyServlet</servlet-name>
+		<url-pattern>/MyServlet</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-class>MyDateTimeServlet</servlet-class>
+		<servlet-name>MyDateTimeServlet</servlet-name>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>MyDateTimeServlet</servlet-name>
+		<url-pattern>/MyDateTimeServlet</url-pattern>
+	</servlet-mapping>
+</web-app>

@@ -1,0 +1,45 @@
+<web-app>
+	<!-- Login Servlet -->
+	<servlet>
+		<servlet-class>LoginServlet</servlet-class>
+		<servlet-name>LoginServlet</servlet-name>
+
+		<!-- Init Parameter -->
+		<init-param>
+			<param-name>dbUrl</param-name>
+			<param-value>jdbc:oracle:thin:@//localhost:1521/xe</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>systemName</param-name>
+			<param-value>system</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>password</param-name>
+			<param-value>620677</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>dbName</param-name>
+			<param-value>users</param-value>
+		</init-param>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>LoginServlet</servlet-name>
+		<url-pattern>/LoginServlet</url-pattern>
+	</servlet-mapping>
+
+	<!-- Register Servlet -->
+	<servlet>
+		<servlet-class>RegisterServlet</servlet-class>
+		<servlet-name>RegisterServlet</servlet-name>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegisterServlet</servlet-name>
+		<url-pattern>/RegisterServlet</url-pattern>
+	</servlet-mapping>
+
+</web-app>
